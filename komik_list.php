@@ -9,7 +9,7 @@
 <div class="nav">
 <a href="cerita_list.php">Cerita List</a>
 <a href="komik_list.php" class="active">Komik List</a>
-<a href="kirim_cerita.html">Kirim Cerita</a>
+<a href="halaman_kirim_email.html">Kirim Cerita</a>
 </div>
 <div class="kontent">
 
