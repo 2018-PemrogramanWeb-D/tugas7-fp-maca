@@ -48,8 +48,11 @@ p 		{text-align: center;}
 
 }
 .kontent 	{
-            width: 90%;
-            margin: 2px auto;
-            padding: 3px 13px;
-            background: rgba(235, 250, 250, 0.6);
+          width: 90%;
+          margin: 2px auto;
+          padding: 3px 13px;
+          background: rgba(235, 250, 250, 0.6);
         	text-align: center;}
+.nav .home{
+          width: 16px;
+          height: 16px;}
