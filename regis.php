@@ -15,8 +15,8 @@
 			$email = mysqli_real_escape_string($con,$email);
 			$password = stripslashes($_REQUEST['password']);
 			$password = mysqli_real_escape_string($con,$password);
-				$query = "INSERT into `login` (username, password, email, trn_date)
-				VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
+				$query = "INSERT into `login` (username, password, email)
+				VALUES ('$username', '".md5($password)."', '$email')";
 				$result = mysqli_query($con,$query);
 				if($result){
 					echo "<div class='content'>
