@@ -1,17 +1,20 @@
-<?php  
-session_start();
-include "db_connection.php";
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
 
-$query = "SELECT * FROM cerita";
-$result = mysql_query($query);
 
 <?php
+mysql_connect("localhost","root","");
+mysql_select_db("pweb_maca");
 
-while ($data = mysql_fetch_array($result)) {
-	echo '<img src=".$data[ikon]." />';
-	echo ".$data[judul].";
-}
-
-
+$res=mysql_query("SELECT * from cerita");
+while ($row=mysql_fetch_array($res)) {
+	echo '<img src="data:icon/jpeg;base64,'.base64_encode($row['icon']).'width="300" height="250">' 
+	;}
 
 ?>
+</body>
+</html>
