@@ -32,15 +32,15 @@
 				<br/>Click here to <a href='login.php'>Login</a></div>";
 			}
     }else{
-	?>
+	?><br><br><br><br><br><br>
 		<div class="content">
-			<h1>Log In</h1>
+			<h1>Masuk | Log In</h1>
 			<form action="" method="post" name="login">
 				<input type="text" name="username" placeholder="Username" required />
 				<input type="password" name="password" placeholder="Password" required />
 				<input name="submit" type="submit" value="Login" />
 			</form>
-			<p>Not registered yet? <a href='regis.php'>Register Here</a></p>
+			<p>Belum registrasi? <a href='regis.php'>Registrasi Disini</a></p>
 		</div>
 	<?php } ?>
 </body>

@@ -25,9 +25,9 @@
 				}
 		
 		}else{
-		?>
+		?><br><br><br><br><br><br>
 		<div class="content">
-			<h1>Registration</h1>
+			<h1>Registrasi</h1>
 			<form name="registration" action="" method="post">
 				<input type="text" name="username" placeholder="Username" required />
 				<input type="email" name="email" placeholder="Email" required />
