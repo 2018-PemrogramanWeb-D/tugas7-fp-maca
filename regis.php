@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>MACA | Restrasi</title>
+	<title>MACA | Registrasi</title>
 	<link rel="stylesheet" href="connect_db.css">
 </head>
 <body background-image="index.jpg", background-repeat="no-repeat", text-align="center", font-family="Cantarell">
@@ -15,8 +15,8 @@
 			$email = mysqli_real_escape_string($con,$email);
 			$password = stripslashes($_REQUEST['password']);
 			$password = mysqli_real_escape_string($con,$password);
-				$query = "INSERT into `login` (username, password, email)
-				VALUES ('$username', '".md5($password)."', '$email')";
+				$query = "INSERT into `login` (username, email, password)
+				VALUES ('$username', '$email', '".md5($password)."')";
 				$result = mysqli_query($con,$query);
 				if($result){
 					echo "<div class='content'>
