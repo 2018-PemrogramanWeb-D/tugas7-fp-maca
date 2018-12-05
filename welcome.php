@@ -13,19 +13,41 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Welcome</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-    <style type="text/css">
-        body{ font: 14px sans-serif; text-align: center; }
-    </style>
+    <title>MACA | Ayo membaca!</title>
+	<link rel="stylesheet" href="css_index.css">
+	<link href='https://fonts.googleapis.com/css?family=Berkshire Swash' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
+<header>
+	<img src="http://pluspng.com/img-png/bear-cute-png-cute-bear-peeker-for-winter-reading-2014-599.png" alt="Menu" style="text-align: left; width:50px;height:50px;"><!-- 
+	<a href="index.html"><img  class="image" src="http://pluspng.com/img-png/bear-cute-png-cute-bear-emoticon-09-png-2480.png" alt="Bear"></a> -->
+	<a href="logout.php"><img class="image" src="https://static.thenounproject.com/png/4930-200.png" width="50px" height="50px" alt="Logout"></a>
+</header>
     <div class="page-header">
-        <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
+        <h3>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Selamat datang di MACA.</h3>
     </div>
-    <p>
-        <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
-        <a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
-    </p>
+    <br><br><br><br>
+	<div class="content">
+	<h1>MACA</h1>
+	<h3>Ayo membaca!</h3>
+	<div class="menu">
+	<a href="cerita_list.html" class="button"><b>Cerita</b></a>
+	<a href="komik_list.html" class="button"><b>Komik</b></a>
+	<a href="halaman_kirim_email.html" class="button"><b>Kirim Cerita</b></a>
+	</div>
+<form action="cerita_list.php" method="post">
+	<br><input type="text" name="cari" class="cari">
+	<!-- <a href="cerita_list.php" class="button_cari"><b>Cari</b></a> -->
+	 <input type="submit" name="submit" value="Cari" class="button_cari">
+</form>
+<br>
+
+</div>
+	<br><br><br><br>
+<footer>
+  <p>Diajukan untuk memenuhi tugas Pemrograman Web 2018</p>
+</footer>
 </body>
 </html>
