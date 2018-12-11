@@ -9,13 +9,13 @@ footer		{background: rgba(235, 250, 250); padding: 20px;}
 .menu 		{height: 500px
             margin: 2px auto;
             padding: 3px 13px;
-            background: rgba(235, 250, 250);}
+            background: crimson;}
 .menu .image{
 			float:right;
 			width:42px;
 			height:42px;}
 .button 	{ 
-			background-color: #00e673;
+			background-color: crimson;
     		order: none;
     		color: white;
     		padding: 15px 32px;
@@ -45,6 +45,6 @@ footer		{background: rgba(235, 250, 250); padding: 20px;}
 			width: 50%;
 
 			margin: 5px auto;
-			background-color: #00e673;
+			background-color: crimson;
 			}
 
