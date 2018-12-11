@@ -1,7 +1,19 @@
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+?>
+ 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>MACA | Ayo membaca!</title>
+    <meta charset="UTF-8">
+    <title>MACA | Ayo membaca!</title>
 	<link rel="stylesheet" href="css_index.css">
 	<link href='https://fonts.googleapis.com/css?family=Berkshire Swash' rel='stylesheet'>
 	<link href='https://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet'>
@@ -13,7 +25,10 @@
 	<a href="index.html"><img  class="image" src="http://pluspng.com/img-png/bear-cute-png-cute-bear-emoticon-09-png-2480.png" alt="Bear"></a> -->
 	<a href="logout.php"><img class="image" src="https://static.thenounproject.com/png/4930-200.png" width="50px" height="50px" alt="Logout"></a>
 </header>
-	<br><br><br><br>
+    <div class="page-header">
+        <h3>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Selamat datang di MACA.</h3>
+    </div>
+    <br><br><br><br>
 	<div class="content">
 	<h1>MACA</h1>
 	<h3>Ayo membaca!</h3>
