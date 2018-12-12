@@ -1,12 +1,7 @@
 <?php  
 
-$hostname="localhost";
-$username="root";
-$password="";
-$database="maca";
-
-mysql_connect($hostname,$username,$password);
-mysql_select_db($database)
+mysql_connect("localhost","root","");
+mysql_select_db("pweb_maca")
 or die("Connection failed":.mysql_error());
 
 ?>

@@ -2,13 +2,12 @@
 <html>
 <head>
 	<title>List Komik | MACA</title>
-	<link rel="stylesheet" href="css_cerita_list.css">
+	<link rel="stylesheet" href="css_komik_list.css">
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Nunito">
 </head>
 <body>
 
 <div class="nav">
-<a href="index.html"  ><img src="https://image.flaticon.com/icons/svg/25/25694.svg" alt="Home" class="home"></a>
 <a href="cerita_list.php">Cerita List</a>
 <a href="komik_list.php" class="active">Komik List</a>
 <a href="halaman_kirim_email.html">Kirim Cerita</a>

@@ -1,8 +1,6 @@
 <?php
-// Initialize the session
 session_start();
  
-// Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
@@ -21,7 +19,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 </head>
 <body>
 <header>
-<!-- 	<img src="http://pluspng.com/img-png/bear-cute-png-cute-bear-peeker-for-winter-reading-2014-599.png" alt="Menu" style="text-align: left; width:50px;height:50px;"> --><!-- 
+	<!-- 
 	<a href="index.html"><img  class="image" src="http://pluspng.com/img-png/bear-cute-png-cute-bear-emoticon-09-png-2480.png" alt="Bear"></a> -->
 	<a href="logout.php"><img class="image" src="https://static.thenounproject.com/png/4930-200.png" width="50px" height="50px" alt="Logout"></a>
 </header>
@@ -47,7 +45,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 </div>
 	<br><br><br><br>
 <footer>
-  <p>Diajukan untuk memenuhi Tugas Akhir mata kuliah Pemrograman Web 2018</p>
+  <p>Diajukan untuk memenuhi tugas Pemrograman Web 2018</p>
 </footer>
 </body>
 </html>

@@ -7,9 +7,10 @@ body 		{background-image: url("index.jpg");
 footer		{background: 	rgb(220,20,60);
 			     padding: 20px;
 			     color: white;}
-
+h2{text-align: center;}
+h3{text-align: center;}
 a			{    
-			color:crimson;
+			color:white;
 			padding: 10px 20px;
 		  text-align: center;
     	text-decoration: none;
@@ -40,8 +41,7 @@ p 		{text-align: center;}
   			color: white;
 }
 
-.image{width: 150px;
-	  height: 200px;
+.image{width: 500px;
 }
 .logo {width: 150px;
 	  height: 200px;
