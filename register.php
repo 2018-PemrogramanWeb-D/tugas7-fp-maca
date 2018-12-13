@@ -110,6 +110,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </style>
 </head>
 <body>
+<div class="edit">
     <div class="wrapper">
 	<link rel="stylesheet" href="css_index.css">
         <h2>MACA | Sign Up</h2>
@@ -134,8 +135,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input type="submit" class="btn btn-primary" value="Submit">
                 <input type="reset" class="btn btn-default" value="Reset">
             </div>
-            <p>Sudah punya akun? <a href="login.php">Silahkan masuk disini</a>.</p>
+            <b>Sudah punya akun? <a href="login.php">Silahkan masuk disini</a>.</b>
         </form>
-    </div>    
+    </div>  
+</div>	
 </body>
 </html>
