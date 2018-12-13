@@ -59,6 +59,7 @@ $(document).ready(function(){
         	<input type="text" autocomplete="off" placeholder="Cari cerita di sini!" />
         	<div class="result"></div>
     	</div>
+	<br><br><br><br>
 </div>
 	<br><br><br><br>
 <footer>
