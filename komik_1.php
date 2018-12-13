@@ -21,7 +21,7 @@ mysql_connect("localhost","root","");
 mysql_select_db("pweb_maca");
 
 $db = mysqli_connect("localhost","root","","pweb_maca");
-$sql = "SELECT page FROM komik_isi where id_komik='k01'";
+$sql = "SELECT page FROM komik_isi where id_komik='k001'";
 $sth = $db->query($sql);
 
 while ($result=mysqli_fetch_array($sth)) {
