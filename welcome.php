@@ -24,7 +24,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 	<a href="logout.php"><img class="image" src="https://static.thenounproject.com/png/4930-200.png" width="50px" height="50px" alt="Logout"></a>
 </header>
     <div class="page-header">
-        <h3>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Selamat datang di MACA.</h3>
+        <h2>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Selamat datang di MACA.</h2>
     </div>
     <br><br><br><br>
 	<div class="content">
@@ -33,7 +33,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 	<div class="menu">
 	<a href="cerita_list.php" class="button"><b>Cerita</b></a>
 	<a href="komik_list.php" class="button"><b>Komik</b></a>
-	<a href="halaman_kirim_email.html" class="button"><b>Kirim Cerita</b></a>
+	<a href="halaman_kirim_email.php" class="button"><b>Kirim Cerita</b></a>
 	</div>
 <form action="cerita_list.php" method="post">
 	<br><input type="text" name="cari" class="cari">
