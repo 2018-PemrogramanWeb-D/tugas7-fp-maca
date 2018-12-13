@@ -1,82 +1,58 @@
 body 		{background-image: url("index.jpg");
-			background-size: 100%;
-            background-repeat: no-repeat;
-			text-align: center;
-			font-family: Cantarell;}
-h1 			{font-family: Garamond; color: black; font-size: 80px; text-align: center;}
+		background-size: 100%;
+            	background-repeat: no-repeat;
+		text-align: center;
+		font-family: Cantarell;}
+h1 		{font-family: Garamond; color: black; font-size: 80px; text-align: center;}
 header		{text-align: left}
 footer		{background: rgba(235, 250, 250); padding: 20px;}
 .menu 		{height: 500px
-            margin: 2px auto;
-            padding: 3px 13px;
-            background: crimson;}
-.menu .image{
-			float:right;
-			width:42px;
-			height:42px;}
-.button 	{ 
-			background-color: crimson;
+            	margin: 2px auto;
+            	padding: 3px 13px;
+            	background: crimson;}
+.menu .image{	float:right;
+		width:42px;
+		height:42px;}
+.button {	background-color: crimson;
     		order: none;
     		color: white;
     		padding: 15px 32px;
     		text-align: center;
-   			text-decoration: none;
+   		text-decoration: none;
     		display: inline-block;
     		font-size: 16px;
     		margin: 4px 2px;
     		cursor: pointer;
-    		font-family: century gothic;
-    		}
- .button_cari {
- 			padding: 5px 20px;
- 			background-color: white;
- 			}
-.cari 		{
-			padding: 5px 60px;
-
-}
-.content 	{
-            width: 70%;
-            height: 70%;
-            margin: 2px auto;
-            padding: 3px 13px;
-            background: rgba(235, 250, 250);}
-.content .menu	{
-			width: 50%;
-
-			margin: 5px auto;
-			background-color: crimson;
-			}
-
-    .search-box{
-        width: 300px;
-        position: relative;
-        display: inline-block;
-        font-size: 14px;
-    }
-    .search-box input[type="text"]{
-        height: 32px;
-        padding: 5px 10px;
-        border: 1px solid #CCCCCC;
-        font-size: 14px;
-    }
-    .result{
-        position: absolute;        
-        z-index: 999;
-        top: 100%;
-        left: 0;
-    }
-    .search-box input[type="text"], .result{
-        width: 100%;
-        box-sizing: border-box;
-    }
-    .result p{
-        margin: 0;
-        padding: 7px 10px;
-        border: 1px solid #CCCCCC;
-        border-top: none;
-        cursor: pointer;
-    }
-    .result p:hover{
-        background: #f2f2f2;
-    }
+    		font-family: century gothic;}
+.content {     	width: 70%;
+            	height: 70%;
+            	margin: 2px auto;
+            	padding: 3px 13px;
+            	background: rgba(235, 250, 250);}
+.content .menu{ width: 50%;
+		margin: 5px auto;
+		background-color: crimson;}
+.search-box{    width: 400px;
+      		position: relative;
+        	display: inline-block;
+        	font-size: 14px;}
+.search-box input[type="text"]{
+	        height: 32px;
+       		padding: 5px 10px;
+        	border: 1px;
+        	font-size: 14px;}
+.result{ 	position: absolute;        
+         	z-index: 999;
+       		top: 100%;
+        	left: 0;}
+.search-box input[type="text"], .result{
+        	width: 100%;
+        	box-sizing: border-box;}	
+.result p{	text-decoration: none;
+	        margin: 0;
+		color: crimson;
+        	padding: 5px 10px;
+       		border-top: none;
+        	cursor: pointer;}
+.result p:hover{
+        	background: rgba(235, 250, 250);}
