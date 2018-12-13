@@ -93,19 +93,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta charset="UTF-8">
     <title>MACA | Login</title>
 	
-	<link rel="stylesheet" href="css_index.css">
 	<link href='https://fonts.googleapis.com/css?family=Berkshire Swash' rel='stylesheet'>
 	<link href='https://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
     <style type="text/css">
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }
     </style>
 </head>
 <body>
+<div class="edit">
     <div class="wrapper">
+	<link rel="stylesheet" href="css_index.css">
         <h2>MACA | Login</h2>
         <p>Harap isi kolom berikut untuk masuk ke halaman utama.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
@@ -122,8 +122,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Login">
             </div>
-            <p>Belum punya akun? <a href="register.php">Bisa registrasi disini</a>.</p>
+            <b>Belum punya akun? <a href="register.php">Bisa registrasi disini</a>.</b>
         </form>
-    </div>    
+    </div>  
+</div>	
 </body>
 </html>
