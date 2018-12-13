@@ -49,7 +49,7 @@ $(document).ready(function(){
 	</div>
 		
 	<div class="search-box">
-        	<input type="text" autocomplete="off" placeholder="Cari cerita di sini!" />
+        	<input type="text" autocomplete="off" placeholder="Cari judulnya di sini!" />
         	<div class="result"></div>
     	</div>
 	<br><br><br><br>
