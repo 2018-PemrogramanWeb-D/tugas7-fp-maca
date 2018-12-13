@@ -122,7 +122,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Login">
             </div>
-            <b>Belum punya akun? <a href="register.php">Bisa registrasi disini</a>.</b>
+		<br>
+            <b>Belum punya akun? <a href="register.php" style="color:white">Bisa registrasi disini.</a></b>
         </form>
     </div>  
 </div>	
