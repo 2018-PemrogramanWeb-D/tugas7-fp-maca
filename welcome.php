@@ -36,9 +36,9 @@ $(document).ready(function(){
 	<a href="logout.php"><img class="image" src="https://static.thenounproject.com/png/4930-200.png" width="50px" height="50px" alt="Logout"></a>
 </header>
     <div class="page-header">
-        <h2>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Selamat datang di MACA.</h2>
+        <h2>Halo, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Selamat datang di MACA.</h2>
     </div>
-    <br><br><br><br>
+    <br><br>
     <div class="content">
 	<h1>MACA</h1>
 	<h3>Ayo membaca!</h3>
