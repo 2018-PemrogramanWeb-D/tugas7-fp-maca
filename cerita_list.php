@@ -6,12 +6,13 @@
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Nunito">
 </head>
 <body>
+
 <div class="nav">
-<a href="index.html" class="home"><img src="https://www.freeiconspng.com/uploads/home-button-png-icon-30.png" alt="Home"></a>
 <a href="cerita_list.php" class="active">Cerita List</a>
 <a href="komik_list.php">Komik List</a>
 <a href="halaman_kirim_email.html">Kirim Cerita</a>
 </div>
+
 <div class="kontent">
 
 <?php
@@ -24,19 +25,20 @@ $sth = $db->query($sql);
 $baris = '<div class="row">';
 $kolom = '<div class="column">';
 $isi = '<div class="content">';
-
+$warna = '<div class="linknya">';
 echo "$baris";
 
 while ($result=mysqli_fetch_array($sth)){
 
-$linknya="<a href='".$result['link']."'>";
+$linknya ="<a href='".$result['link']."'>";
 
 echo $kolom;
 echo $isi;
 echo '<img src="data:image/jpeg;base64,'.base64_encode( $result['icon'] ).'" class="image"/><br>';
+echo $warna;
 echo $linknya;
 echo $result['judul'];
-echo "</a><br>";
+echo "</a></div><br>";
 echo $result['pengarang'];
 echo "</div> </div>";
 }
