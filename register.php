@@ -98,8 +98,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <title>MACA | Registrasi</title>
-
-	<link rel="stylesheet" href="css_index.css">
+	
 	<link href='https://fonts.googleapis.com/css?family=Berkshire Swash' rel='stylesheet'>
 	<link href='https://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -112,6 +111,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <body>
     <div class="wrapper">
+	<link rel="stylesheet" href="css_index.css">
         <h2>MACA | Sign Up</h2>
         <p>Harap isi form berikut untuk registrasi</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
