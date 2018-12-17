@@ -7,10 +7,10 @@ define('DB_PASSWORD', '');
 define('DB_NAME', 'pweb_maca');
  
 /* Attempt to connect to MySQL database */
-$link = mysqli_connect('10.151.253.102','root','','pweb_maca');
+$link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
  
 // Check connection
-if($link == false){
+if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 ?>
