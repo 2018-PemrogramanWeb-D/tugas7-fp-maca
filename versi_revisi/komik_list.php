@@ -44,7 +44,7 @@ $(document).ready(function(){
 
 		<?php
 			$db = mysqli_connect("localhost","root","","pweb_maca");
-			$sql = "SELECT * FROM komik";
+			$sql = "SELECT * FROM komik WHERE show_this='1'";
 			$sth = $db->query($sql);
 			$baris = '<div class="row">';
 			$kolom = '<div class="column">';
