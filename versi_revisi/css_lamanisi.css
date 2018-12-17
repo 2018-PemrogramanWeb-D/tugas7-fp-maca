@@ -1,0 +1,35 @@
+body 		{/*background-image: url(https://i.stack.imgur.com/4LmIr.jpg);*/
+			background-color:#33cccc; 
+			background-position: center;
+            background-repeat: no-repeat;
+			text-align: center;
+			font-family: Cantarell;}
+footer		{background: rgba(235, 250, 250); padding: 20px;}
+section		{
+			font-family: Cantarell;
+			background: white;
+			text-align: justify;
+			}
+.isi 		{
+			margin: 10%;
+
+}
+.content 	{
+            margin: 2px auto;
+            padding: 3px 13px;
+            background: white;}
+
+.button 	{ 
+			background-color: #00e673;
+			width: 200px;
+    		order: none;
+    		color: white;
+    		padding: 15px 32px;
+    		text-align: center;
+   			text-decoration: none;
+    		display: inline-block;
+    		font-size: 16px;
+    		margin: 4px 2px;
+    		cursor: pointer;
+    		font-family: Cantarell;}
+

@@ -1,0 +1,121 @@
+body 		{background-image: url("index.jpg");
+        	background-size: 100%;
+           	background-repeat: no-repeat;
+		    text-align: center;
+		    font-family: Cantarell;}
+h2 		{font-family: Nunito; color: black;  text-align: center;}
+header		{text-align: left}
+footer		{background: rgba(235, 250, 250); padding: 20px;}
+input[type=text], select {
+    width: 100%;
+  border-radius: 5px;
+  margin: 7px 0;
+  border: 1px solid #ccc;
+    padding: 14px 18px; 
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+input[type=submit]:hover {
+    background-color: #00a7d1;
+}
+
+textarea, select {
+   width: 100%;
+  border-radius: 5px;
+  margin: 7px 0;
+  border: 1px solid #ccc;
+    padding: 14px 18px; 
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+  border: none;
+  color: white;
+  padding: 14px 20px;
+    background-color: #01c9fb;
+    margin: 8px 0;
+  cursor: pointer;
+    border-radius: 4px;
+    
+}
+.formnya{   text-align: center;
+
+}
+.menu 		{height: 500px
+            	margin: 2px auto;
+            	padding: 3px 13px;
+            	background: crimson;}
+.menu .image{	float:right;
+		width:42px;
+		height:42px;}
+.button {	background-color: crimson;
+    		order: none;
+    		color: white;
+    		padding: 15px 32px;
+    		text-align: center;
+   		text-decoration: none;
+    		display: inline-block;
+    		font-size: 16px;
+    		margin: 4px 2px;
+    		cursor: pointer;
+    		font-family: century gothic;}
+.content {     	width: 70%;
+            	height: 70%;
+            	margin: 2px auto;
+            	padding: 3px 13px;
+            	background: rgba(235, 250, 250);}
+.content .menu{ width: 50%;
+		margin: 5px auto;
+		background-color: crimson;}
+.search-box{    width: 400px;
+      		position: relative;
+        	display: inline-block;
+        	font-size: 14px;}
+.search-box input[type="text"]{
+	        height: 32px;
+       		padding: 5px 10px;
+        	border: 1px;
+        	font-size: 14px;}
+.result{ 	position: absolute;        
+         	z-index: 999;
+       		top: 100%;
+        	left: 0;}
+.search-box input[type="text"], .result{
+        	width: 100%;
+        	box-sizing: border-box;}	
+.result p{	text-decoration: none;
+	        margin: 0;
+		color: crimson;
+        	padding: 5px 10px;
+       		border-top: none;
+        	cursor: pointer;}
+.result p:hover{
+        	background: rgba(235, 250, 250);}
+.nav  {
+        overflow: hidden;
+        background-color: crimson;
+        font-family: Nunito;  }
+
+.nav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+}
+.nav a:hover {
+      background-color: #ddd;
+        color: black;
+}
+
+.nav a.active {
+        background-color: #FF8839;
+        color: white;
+}
+.nav .home{
+          width: 16px;
+          height: 16px;}
