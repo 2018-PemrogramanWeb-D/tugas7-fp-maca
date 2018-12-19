@@ -1,3 +1,5 @@
+<?php require_once "session.php"; ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,14 +8,14 @@
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Charmonman">
 </head>
 <body>
-
 		<div class="nav">
-		<a href="index.html"  ><img src="https://image.flaticon.com/icons/svg/25/25694.svg" alt="Home" class="home"></a>
-		<a href="cerita_list.php" >Cerita List</a>
-		<a href="komik_list.php">Komik List</a>
-		<a href="halaman_kirim_email.html">Kirim Cerita</a>
+			<a href="welcome.php"><img src="https://image.flaticon.com/icons/svg/25/25694.svg" alt="Home" class="home"></a>
+			<a href="cerita_list.php" >Cerita List</a>
+			<a href="komik_list.php">Komik List</a>
+			<a href="halaman_kirim_email.php">Kirim Cerita</a>
 		</div>
-	<div class="kontent"><p>Dahulu kala ada seorang penggiling gandum. Dia adalah laki-laki bodoh yang selalu berbicara tanpa berpikir panjang.</p>
+		<div class="kontent">
+<p>Dahulu kala ada seorang penggiling gandum. Dia adalah laki-laki bodoh yang selalu berbicara tanpa berpikir panjang.</p>
 <p>Suatu hari, raja berkuda melintasi penggilingan bersama para pemburunya. Anak perempuan penggiling gandum itu sedang duduk memintal di pintu depan. Raja terpesona melihat kecantikan gadis itu sehingga dia mulai berbicara padanya. Ayahnya segera datang dan mulai mengatakan kepada raja betapa luar biasa putrinya itu.</p>
 <p><i class=“saying”>Wah, Yang Mulia, dia bahkan dapat memintal jerami jadi emas!</i> kata penggiling gandum itu.</p>
 <p>Gadis malang itu terdiam, dia tidak bisa melakukan hal seperti itu, tapi raja merasa itu adalah cara terbaik untuk mengisi kembali ruang harta istana yang sudah agak kosong. Jadi, dia membawa putri itu ke istana. Dia mengajak gadis itu ke dalam ruangan berisi setumpuk besar jerami dan menyuruhnya memintal semua jerami yang ada jadi emas. Kalau tidak, keesokan harinya akan ada hal buruk yang menimpanya.</p>
@@ -57,13 +59,10 @@
 <p><i class=“saying”>Bukan!</i> ujar laki-laki kecil itu, dan dia mulai melangkah menuju pintu dengan senyum jahatnya.</p>
 <p><i class=“saying”>Apakah Rumpelstiltskin?</i> tanya Ratu, dan dia mengejar lak-laki kecil aneh itu.</p>
 <p><i class=“saying”>Pasti ada penyihir yang mengatakannya!</i> jerit laki-laki kecil itu, dan dia mengentakkan kakinya begitu keras sehingga jatuh menembus lantai dan tidak pernah terlihat lagi. Ratu menceritakan kepada Raja seluruh kisahnya dan Raja sangat senang bayi dan permaisurinya selamat sehingga dia lupa memarahi penggiling tepung itu karena telah berbohong sejak awal!</p>
-
-
-
 	</div>
 
 	<footer>
-  <p>Diajukan untuk memenuhi tugas Pemrograman Web 2018</p>
-</footer>
+		<p>Diajukan untuk memenuhi tugas Pemrograman Web 2018</p>
+	</footer>
 </body>
 </html>

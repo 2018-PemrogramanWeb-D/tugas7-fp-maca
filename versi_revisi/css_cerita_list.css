@@ -18,13 +18,13 @@ a			{
     		font-family: Nunito;}
 p 			{text-align: center;} 
 .row {
-    margin: 5px-15px;}
+    margin: 5px-10px;}
 .row,
 .row > .column {
     		padding: 5px;}
 .column {
     		float: left;
-    		width: 25%;}
+    		width: 24%;}
 .row:after {
     		content: "";
     		display: table;
@@ -45,51 +45,52 @@ p 			{text-align: center;}
         	width: 100%;
     }
 }
-
-.nav	{
-  			overflow: hidden;
-		  	background-color: crimson;
-		  	font-family: Nunito;	}
+.result p:hover{
+          background: rgba(235, 250, 250);}
+.nav  {
+        overflow: hidden;
+        background-color: crimson;
+        font-family: Nunito;  }
 
 .nav a {
-  			float: left;
-  			color: #f2f2f2;
-  			text-align: center;
-  			padding: 14px 16px;
-  			text-decoration: none;
-  			font-size: 17px;
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
 }
 .nav a:hover {
- 			background-color: #ddd;
-  			color: black;
+      background-color: #ddd;
+        color: black;
 }
 
 .nav a.active {
-  			background-color: #FF8839;
-  			color: white;
+        background-color: #FF8839;
+        color: white;
 }
-.image{
-  width: 150px;
-
+.image{width: 150px;
+  height: 200px;
+  object-fit: contain;
 }
 .logo {width: 150px;
-	  height: 200px;
+    height: 200px;
 
 }
-.kontent 	{
+.kontent  {
             width: 90%;
             margin: 2px auto;
             padding: 3px 13px;
             background: rgba(235, 250, 250, 0.6);
-        	text-align: center;}
-.konten .linknya
-		{	float: left;
-  			color: crimson;
-  			text-align: center;
-  			padding: 14px 16px;
-  			text-decoration: none;
-  			font-size: 17px;
+          text-align: center;}
+.kontent .linknya
+    { float: left;
+        color: crimson;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
 }
 .nav .home{
           width: 16px;
-height: 16px;}
+          height: 16px;}
