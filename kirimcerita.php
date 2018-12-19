@@ -69,6 +69,7 @@
     </div>
     <br>
 <h2>Tulis ceritamu di sini!</h2>
+	ceritamu akan diseleksi terlebih dahulu, harap menunggu ya!
 <br><br>
 <table bgcolor="#f2f2f2" style="padding:50px" align="center">
 <form action="kirimcerita.php" method="POST" enctype="multipart/form-data">
@@ -93,5 +94,6 @@
 
 </form>
 </table>
+ 
 </body>
 </html>
