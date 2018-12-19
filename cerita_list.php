@@ -63,7 +63,6 @@ $(document).ready(function(){
 				echo "</div><br>";
 				echo $result['pengarang'];
 				echo "</div> </div>";
-
 			}
 		?>
 			</div>
