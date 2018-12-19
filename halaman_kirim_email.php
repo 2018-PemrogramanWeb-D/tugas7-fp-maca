@@ -5,7 +5,9 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>Kirim Karyamu</title>
-		<link rel="stylesheet" href="css_cerita.css">
+		<link rel="stylesheet" href="css_upload.css">
+		<link href='https://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
 	<head>
 	<body background-image="index.jpg", background-repeat="no-repeat", text-align="center", font-family="Cantarell">
 		<style>
@@ -19,7 +21,6 @@
 				text-align: left;
 			}
 		</style>
-		<!-- <a href="index.html" ><img class="image" src="https://image.flaticon.com/icons/svg/25/25694.svg" width="50px" height="50px" alt="Home"></a> -->
 		<center>
 		<font size="30">MACA</font><br>
 		<font size="4">Mari Membaca</font>
@@ -27,9 +28,9 @@
 
 		<div class="nav">
 		<a href="welcome.php"  ><img src="https://image.flaticon.com/icons/svg/25/25694.svg" alt="Home" class="home"></a>
-		<a href="cerita_list.php" >Cerita List</a>
-		<a href="komik_list.php">Komik List</a>
-		<a href="halaman_kirim_email.html" class="active">Kirim Cerita</a>
+		<a href="cerita_list.php" >Cerita</a>
+		<a href="komik_list.php">Komik</a>
+		<a href="kirimceritakomik.php" class="active">Kirim Cerita</a>
 		</div>
 
 		<hr>
@@ -55,10 +56,7 @@
 			<tr>
 				<td><ul><li>Karya dapat dikirim melalui <b>macakirimkaryamu@gmail.com</b></ul></li></td>
 			</tr>
-			<tr>
-				<td><ul><li>Kirim di sini yaa <a href="https://mail.google.com" target="_blank">Gmail</a></ul></li></td>
-			</tr>
+			
 		</table>
-		<img src="https://media1.tenor.com/images/4a54404d97232c2cfd7b30bb5575e29c/tenor.gif" style="width:200px;height:200px;">
 	</body>
 </html>

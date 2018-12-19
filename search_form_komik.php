@@ -5,7 +5,7 @@ if($sqli === false){
 }
  
 if(isset($_REQUEST["term"])){
-    $sql = "SELECT * FROM daftar WHERE judul LIKE ?";
+    $sql = "SELECT * FROM komik WHERE judul LIKE ?";
     
     if($stmt = mysqli_prepare($sqli, $sql)){
         mysqli_stmt_bind_param($stmt, "s", $term);
@@ -15,7 +15,9 @@ if(isset($_REQUEST["term"])){
             $result = mysqli_stmt_get_result($stmt);
             if(mysqli_num_rows($result) > 0){
                 while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-                    echo "<a href='".$row["link"]."'><p>" . $row["judul"] . "</p></a>";}
+                $idnya=$row['id'];
+                $url="isicerita.php?idcerita=$idnya";
+                echo "<a href=$url><p>" . $row["judul"] . "</p></a>";}
             } 
             else{
                 echo "<p>       </p>";}
