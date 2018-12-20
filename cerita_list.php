@@ -44,13 +44,19 @@ $(document).ready(function(){
     	</div>
 		<?php
 			$db = mysqli_connect("localhost","root","","pweb_maca");
-			$sql = "SELECT * FROM cerita WHERE show_this='1'";
+		//	$sql = "SELECT * FROM cerita WHERE show_this='1'";
+			if(isset($_SESSION['admin'])&&$_SESSION['admin']==true){
+				$sql = "SELECT * FROM cerita";
+			}
+			else{
+				$sql = "SELECT * FROM cerita WHERE show_this='1'";
+			}
 			$sth = $db->query($sql);
 			$baris = '<div class="row">';
 			$kolom = '<div class="column">';
 			$isi = '<div class="content">';
-			$warna = '<div class="linknya">';
 			echo "$baris";
+
 			while ($result=mysqli_fetch_array($sth)){
 				$idnya=$result['id'];
 				$url="isicerita.php?idcerita=$idnya";
@@ -58,13 +64,19 @@ $(document).ready(function(){
 				echo $kolom;
 				echo $isi;
 				echo '<img src="data:image/jpeg;base64,'.base64_encode( $result['icon'] ).'" class="image"><br>';
-				echo $warna;
 				echo $linknya;
-				echo "</div><br>";
+				echo "<br>";
 				echo $result['pengarang'];
+				if(isset($_SESSION['admin'])&&$_SESSION['admin']==true){
+										echo "<br>";
+					echo $result['show_this'];
+					echo "<div><a href=delete_cerita.php?idcerita=$idnya>Hapus</a> </div>";
+				echo "<div><a href=showthis_cerita.php?idcerita=$idnya>Tampilkan</a></div>";
+				}
 				echo "</div> </div>";
-
 			}
+
+
 		?>
 			</div>
 	</div>

@@ -14,7 +14,7 @@ $(document).ready(function(){
         var inputVal = $(this).val();
         var resultDropdown = $(this).siblings(".result");
         if(inputVal.length){
-            $.get("search_form_komik.php", {term: inputVal}).done(function(data){
+            $.get("search_form_cerita.php", {term: inputVal}).done(function(data){
                 resultDropdown.html(data);
             });
         } else{
@@ -32,25 +32,19 @@ $(document).ready(function(){
 <body>
 	<div class="nav">
 		<a href="welcome.php"><img src="https://image.flaticon.com/icons/svg/25/25694.svg" alt="Home" class="home"></a>
-		<a href="cerita_list.php">Cerita</a>
-		<a href="komik_list.php" class="active">Komik</a>
+		<a href="cerita_list.php" class="active">Cerita</a>
+		<a href="komik_list.php">Komik</a>
 		<a href="kirimceritakomik.php">Kirim Cerita</a>
+		
 	</div>
 	<div class="kontent">
 		<div class="search-box">
         	<input type="text" autocomplete="off" placeholder="Cari judulnya di sini!" />
         	<div class="result"></div>
     	</div>
-
 		<?php
 			$db = mysqli_connect("localhost","root","","pweb_maca");
-			//$sql = "SELECT * FROM komik";
-			if(isset($_SESSION['admin'])&&$_SESSION['admin']==true){
-				$sql = "SELECT * FROM komik";
-			}
-			else{
-				$sql = "SELECT * FROM komik WHERE show_this='1'";
-			}
+			$sql = "SELECT * FROM cerita WHERE show_this='1'";
 			$sth = $db->query($sql);
 			$baris = '<div class="row">';
 			$kolom = '<div class="column">';
@@ -59,20 +53,15 @@ $(document).ready(function(){
 			echo "$baris";
 			while ($result=mysqli_fetch_array($sth)){
 				$idnya=$result['id'];
-				$url="isikomik.php?idcerita=$idnya";
+				$url="isicerita.php?idcerita=$idnya";
 				$linknya ="<a href=$url>" . $result['judul'] . "</a>";
 				echo $kolom;
 				echo $isi;
 				echo '<img src="data:image/jpeg;base64,'.base64_encode( $result['icon'] ).'" class="image"><br>';
+				echo $warna;
 				echo $linknya;
-				echo "<br>";
+				echo "</div><br>";
 				echo $result['pengarang'];
-				if(isset($_SESSION['admin'])&&$_SESSION['admin']==true){
-					echo "<br>";
-					echo $result['show_this'];
-					echo "<div><a href=delete_komik.php?idcerita=$idnya>Hapus</a> </div>";
-				echo "<div><a href=showthis_komik.php?idcerita=$idnya>Tampilkan</a></div>";
-				}
 				echo "</div> </div>";
 
 			}

@@ -1,49 +1,54 @@
+
 <?php
   require_once "session.php";
   $db = mysqli_connect("localhost", "root", "", "pweb_maca");
 
-  $name_error=$judul_error=$teks_error=$image_error="";
+  $sukses="ceritamu akan diseleksi terlebih dahulu, harap menunggu ya!";
+  $imageerr = $texteerr = $judulerr=$namanyaerr="";
  
-  if (isset($_POST['submit'])){
+ 
+  if (isset($_POST['upload'])){
 
-    $image=addslashes(file_get_contents($_FILES['image']['tmp_name']));
-    if(empty($image)){
-                $image_error="eror";    
-            }
-	if(empty($_POST["name"])){
-                $name_error="eror";
-            }
-    if(empty($_POST["judul"])){
-                $judul_error="eror";
-            }
-	if(empty($_POST["teks"])){
-                $teks_error="eror";
-            }
-    else if(empty($name_error)&&empty($judul_error)&&empty($teks_error)&&empty($image_error)){    
-    $name = mysqli_real_escape_string($db, $_POST['name']);
-	$user = $_SESSION['username'];
-    $judul = mysqli_real_escape_string($db, $_POST['judul']);
-	$teks = mysqli_real_escape_string($db, $_POST['teks']);
 
-  	$sql = "INSERT INTO comment_table (name,user,judul,teks,image) VALUES ('$name','$user','$judul','$teks','$image')";
-  	mysqli_query($db, $sql);
+    if(empty($_FILES['image']['tmp_name'])){
+                $imageerr="Please insert your pict";    
+            }
+    if(empty($_POST["namanya"])){
+                $namanyaerr="Masukan nama penamu";    
+            }
+    if(empty($_POST["image_text"])){
+                $texteerr="Masukan ceritamu";
+            }
+    if(empty($_POST["judulnya"])){
+                $judulerr="Judul tidak boleh kosong";
+            }
+    else if(empty($imageerr)&&empty($texteerr)&&empty($judulerr)){
+         $sukses="ceritamu berhasil dimasukan";
+    $imgData = addslashes(file_get_contents($_FILES['image']['tmp_name']));
+    $image_text = mysqli_real_escape_string($db, $_POST['image_text']);
+    $judulnya = mysqli_real_escape_string($db, $_POST['judulnya']);
+    $namanya2= mysqli_real_escape_string($db, $_POST['namanya']);
+    $usernya=$_SESSION['username'];
+
+    $sql = "INSERT INTO cerita (pengarang,judul,icon,user, isi) VALUES ('$namanya2','$judulnya','$imgData','$usernya', '$image_text')";
+    mysqli_query($db, $sql);
     }
+    
   }
-  
+  $result = mysqli_query($db, "SELECT * FROM cerita");
 ?>
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>MACA | Kirim Cerita</title>
+<title>Image Upload</title>
+
 <link rel="stylesheet" href="css_index_kc.css">
-	<link href='https://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
   $(function() {
     $("#usermsg").keypress(function (e) {
@@ -56,11 +61,10 @@
 });
 
 </script>
-
-
 </head>
 
 <body>
+<div id="content">
  <div class="nav">
     <a href="welcome.php"  ><img src="https://image.flaticon.com/icons/svg/25/25694.svg" alt="Home" class="home"></a>
     <a href="cerita_list.php" >Cerita</a>
@@ -69,29 +73,35 @@
     </div>
     <br>
 <h2>Tulis ceritamu di sini!</h2>
-<br><br>
-<table bgcolor="#f2f2f2" style="padding:50px" align="center">
-<form action="kirimcerita.php" method="POST" enctype="multipart/form-data">
-<tr>
-<td> Nama : </td><td><input type="text" name="name"></td><?php echo $name_error; ?>
-</tr>
-<tr>
-<td> Username : </td><td><?php echo $_SESSION['username']; ?></td>
-</tr>
-<tr>
-<td> Judul : </td><td><input type="text" name="judul"></td><?php echo $judul_error; ?>
-</tr>
-<tr>
-<td> Teks Cerita : </td><td><textarea id="teks" cols="40" rows="4" name="teks" ></textarea><br>
-<?php echo $teks_error; ?></td>
-</tr>
-<tr>
-<td> Cover : </td><td><input type="file" name="image" ></td><?php echo $image_error; ?>
-</tr>
-<tr>
-<td><input type="submit" name="submit"></td></tr>
 
-</form>
+<?php
+echo $sukses;
+?>
+
+<table bgcolor="#f2f2f2" style="padding:50px" align="center">
+
+  <form method="POST" action="kirimcerita.php" enctype="multipart/form-data">
+
+    <tr>
+<td> Judul : </td><td><input type="text" name="judulnya"></td><td><?php echo $judulerr; ?></td>
+</tr>
+ <tr>
+<td> Nama : </td><td><input type="text" name="namanya"></td><td><?php echo $namanyaerr; ?></td>
+</tr>
+ <tr>
+<td> User : </td><td><?php echo $_SESSION['username']; ?>
+</tr>
+<tr>
+<td> Teks Cerita : </td><td><textarea id="teks" cols="40" rows="4" name="image_text" ></textarea></td><td><?php echo $texteerr; ?>
+</td>
+</tr>
+<tr>
+<td> Cover : </td><td><input type="file" name="image" ></td><td><?php echo $imageerr; ?></td>
+</tr>
+<tr>
+<td><input type="submit" name="upload"></td></tr>
+  </form>
 </table>
+</div>
 </body>
 </html>
