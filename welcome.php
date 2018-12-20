@@ -28,8 +28,6 @@
 		<a href="komik_list.php" class="button"><b>Komik</b></a>
 		<a href="kirimceritakomik.php" class="button"><b>Kirim Cerita</b></a>
 	</div>
-
-
 </div>
 	<br><br><br><br>
 <footer>
